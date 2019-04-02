@@ -4,8 +4,8 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-xs-0 col-lg-3"></div>
-    <div class="col-xs-12 col-lg-6">
+    <div class="col-xs-0 col-lg-4"></div>
+    <div class="col-xs-12 col-lg-4">
       <form>
         <div class="form-group">
           <input type="text" class="form-control" id="customer-name-input" placeholder="Name">
@@ -13,25 +13,28 @@
         <div class="form-group">
           <input type="text" class="form-control" id="number-input" placeholder="Number of People">
         </div>
-        <button type="submit" id="check-in-button" class="btn btn-primary">Check In</button>
+        <button type="submit" id="check-in-button" class="btn btn-success">Check In</button>
 
       </form>
+
     </div>
-    <div class="col-xs-0 col-lg-3"></div>
+    <div class="col-xs-0 col-lg-4"></div>
   </div>
 
   <div class="row lists">
     <div class="col-xs-6 col-lg-1"></div>
     <div class="col-xs-6 col-lg-5">
       <ul class="list-group">
-        <li class="list-group-item">
+        <li class="list-group-item list-title">
           <strong>Waiting</strong>
         </li>
         {{#each waiting}}
         <li class="list-group-item">
 
-          {{name}} <span class="party-size">{{size}} </span>
-          <button type="submit" data-customer-id={{id}} class="btn btn-outline-success seat-button">Seat</button>
+          <div class="customer-info">
+            <span class="name">{{name}}</span> <span class="party-size">({{size}}) </span>
+          </div>
+          <button type="submit" data-customer-id={{id}} class="btn btn-outline-primary seat-button">Seat</button>
           <div class="wait-time" data-start-time={{check_in_time}}></div>
         </li>
         {{/each}}
@@ -40,12 +43,14 @@
     </div>
     <div class="col-xs-6 col-lg-5">
       <ul class="list-group">
-        <li class="list-group-item">
+        <li class="list-group-item list-title">
           <strong>Seated</strong>
         </li>
         {{#each seated}}
         <li class="list-group-item">
-          {{name}} <span class="party-size">{{size}} </span>
+          <div class="customer-info">
+            <span class="name">{{name}}</span> <span class="party-size">({{size}})</span>
+          </div>
           <button type="submit" data-customer-id={{id}}
             class="btn btn-outline-danger checkout-button">Check-Out</button>
         </li>

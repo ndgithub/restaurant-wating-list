@@ -1,5 +1,8 @@
 body {
   padding: 30px;
+}
+
+.title {
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -7,12 +10,37 @@ body {
   color: #99999c;
 }
 
+.wait-time {
+  float: right;
+  margin-right: 10px;
+  margin-top: 8px;
+}
+
+.customer-info {
+  float: left;
+  padding-top: 8px;
+}
+
+.name {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
 .seat-button {
   float: right;
 }
 
+.list-title {
+  text-align: center;
+}
+
 .checkout-button {
   float: right;
+}
+
+#check-in-button {
+  width: 100%
 }
 
 li.list-group-item {}
@@ -28,4 +56,5 @@ li.list-group-item {}
 
 form {
   margin-bottom: 30px;
+  text-align: center;
 }
