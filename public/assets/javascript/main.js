@@ -41,3 +41,30 @@ $(document).on("click", "button.checkout-button", function (event) {
     console.log('FAIL');
   })
 });
+
+function setTimers() {
+
+
+  setInterval(function () {
+
+    $('.wait-time').each(function () {
+      var currentTime = (new Date).getTime();
+      var elapsedTime = currentTime - $(this).data('start-time');
+      console.log('elapsedTime', elapsedTime);
+      $(this).text(formattedTime(elapsedTime));
+    })
+  }, 1000)
+}
+
+
+function formattedTime(timeMillies) {
+  console.log(timeMillies);
+  return moment.utc(timeMillies).format('mm:ss');
+
+
+
+}
+
+
+
+setTimers();

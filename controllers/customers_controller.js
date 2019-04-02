@@ -14,6 +14,7 @@ router.get('/', function (req, res) {
       })
     }
     console.log(customersObj);
+    setTimers(customersObj);
     res.render("index", customersObj);
   });
 })
