@@ -1,5 +1,6 @@
 body {
-  padding: 20px;
+  padding: 30px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .party-size {
@@ -18,4 +19,13 @@ li.list-group-item {}
 
 .lists {
   margin-top: 20px;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+form {
+  margin-bottom: 30px;
 }
