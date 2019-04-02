@@ -1,0 +1,21 @@
+body {
+  padding: 20px;
+}
+
+.party-size {
+  color: #99999c;
+}
+
+.seat-button {
+  float: right;
+}
+
+.checkout-button {
+  float: right;
+}
+
+li.list-group-item {}
+
+.lists {
+  margin-top: 20px;
+}

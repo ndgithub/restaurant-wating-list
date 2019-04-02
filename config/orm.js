@@ -9,8 +9,6 @@ var orm = {
 
       callback(result);
     });
-
-
   },
   insertOne: function (table, columnsArray, valuesArray, callback) {
     var checkInTime = (new Date).getTime();
@@ -27,6 +25,14 @@ var orm = {
       if (err) throw err;
       callback(result)
     });
+  },
+  deleteOne: function (table, id, callback) {
+    var queryString = `DELETE FROM ${table} WHERE id = '${id}'`;
+    connection.query(queryString, function (err, result) {
+      if (err) throw err;
+      callback(result)
+    });
+
   }
 }
 

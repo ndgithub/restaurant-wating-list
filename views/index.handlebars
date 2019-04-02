@@ -1,0 +1,56 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-0 col-lg-3"></div>
+    <div class="col-xs-12 col-lg-6">
+      <form>
+        <div class="form-group">
+          <input type="text" class="form-control" id="customer-name-input" placeholder="Name">
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" id="number-input" placeholder="Number of People">
+        </div>
+        <button type="submit" id="check-in-button" class="btn btn-primary">Check In</button>
+
+      </form>
+    </div>
+    <div class="col-xs-0 col-lg-3"></div>
+  </div>
+
+  <div class="row lists">
+    <div class="col-xs-6 col-lg-1"></div>
+    <div class="col-xs-6 col-lg-5">
+      <ul class="list-group">
+        <li class="list-group-item">
+          <strong>Waiting</strong>
+        </li>
+        {{#each waiting}}
+        <li class="list-group-item">
+
+          {{name}} <span class="party-size">{{size}} </span>
+          <button type="submit" data-customer-id={{id}} class="btn btn-outline-success seat-button">Seat</button>
+
+        </li>
+        {{/each}}
+
+      </ul>
+    </div>
+    <div class="col-xs-6 col-lg-5">
+      <ul class="list-group">
+        <li class="list-group-item">
+          <strong>Seated</strong>
+        </li>
+        {{#each seated}}
+        <li class="list-group-item">
+          {{name}} <span class="party-size">{{size}} </span>
+          <button type="submit" data-customer-id={{id}}
+            class="btn btn-outline-danger checkout-button">Check-Out</button>
+        </li>
+        {{/each}}
+
+      </ul>
+    </div>
+    <div class="col-xs-0 col-lg-1"></div>
+  </div>
+
+
+</div>
