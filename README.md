@@ -1,5 +1,5 @@
  <p align="center">
-  <img width="50%" src="public/assets/images/adding-game-screenshot.png">
+  <img width="50%" src="public/assets/images/Restaurant-screenshot.png">
 
 
 # Restaurant Waiting List
