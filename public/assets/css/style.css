@@ -1,6 +1,6 @@
 body {
   padding: 30px;
-  background: #fcfcff;
+  background: #ccccff;
 }
 
 .title {
@@ -53,6 +53,7 @@ li.list-group-item {}
 .title {
   text-align: center;
   margin-bottom: 30px;
+  font-weight: bolder;
 }
 
 form {
